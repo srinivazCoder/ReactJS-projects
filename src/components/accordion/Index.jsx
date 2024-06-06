@@ -3,17 +3,19 @@
 // Multiple selection
 
 import { useState } from "react";
-import data from "./data"
+import data from "./data";
+import "./styles.css";
 
 export default function Accordian() {
     const [selected, setSeleted] = useState(null);
 
     function handleSingleSelection(getCurrentID){
-        setSeleted(getCurrentID)
+        setSeleted(getCurrentID === selected ? null : getCurrentID);
     }
 
     return (
         <div className="wrapper">
+            <button>Enable Multi Selection</button>
             <div className="accordian">
                 {data && data.length > 0 ? data.map((dataItem) => (
                     <div className="item">
@@ -23,7 +25,7 @@ export default function Accordian() {
 
                         </div>
                         {
-                            selected === dataItem.id && <div>{dataItem.answer}</div>
+                            selected === dataItem.id && <div className="content">{dataItem.answer}</div>
                         }
 
                     </div>))
