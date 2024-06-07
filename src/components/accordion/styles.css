@@ -10,7 +10,7 @@
 
 .wrapper button{
     padding:10px 20px;
-    background:#000;
+    background:#614101;
     color:#fff;
     font-weight: bold;
     cursor: pointer;
@@ -35,6 +35,6 @@
 }
 
 .content{
-    color : #ffffff;
+    color : #e2dada;
     height:auto;
 }
