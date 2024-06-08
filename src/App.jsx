@@ -2,7 +2,8 @@ import { useState } from 'react'
 import './App.css'
 import Accordian from "./components/accordion/Index";
 import RandomColor from './components/random-color/Index';
-import StarRating from './components/start-rating/Index'
+import StarRating from './components/start-rating/Index';
+import ImageSlider from "./components/image-slider/index";
 
 function App() {
 
@@ -17,7 +18,10 @@ function App() {
         {/* <RandomColor/> */}
 
         {/* Star Rating */}
-        <StarRating noOfStars={10}/>
+        {/* <StarRating noOfStars={10}/> */}
+
+        {/* Image Slider */}
+        <ImageSlider url={"https://picsum.photos/v2/list"} page={1} limit={10}/>
       </div>
     </>
   )
