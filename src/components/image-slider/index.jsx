@@ -12,7 +12,7 @@ export default function ImageSlider({ url, limit, page = 1 }) {
 
 
     async function fetchImages(getURL) {
-        console.log(getURL)
+        
         try {
             setLoading(true);
             const response = await fetch(`${getURL}?page=${1}&limit=${limit}`);
