@@ -2,9 +2,7 @@ import { useEffect, useState } from "react";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs"
 import "./style.css";
 export default function ImageSlider({ url, limit, page = 1 }) {
-    console.log(url)
-    console.log(limit)
-    console.log(page)
+    
     const [images, setImages] = useState([]);
     const [currentSlide, setCurrentSlide] = useState(0);
     const [errorMsg, setErrorMsg] = useState(null);
@@ -28,7 +26,6 @@ export default function ImageSlider({ url, limit, page = 1 }) {
         }
     }
 
-    console.log(images);
 
     useEffect(() => {
         if (url !== "") fetchImages(url);
