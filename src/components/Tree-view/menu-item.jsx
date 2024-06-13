@@ -12,12 +12,12 @@ export default function MenuItem({ item }) {
         })
     }
     console.log(displayCurrentChildren)
-    return (<li className="menu-item"> 
-        <div style={{ display:'flex', gap:'20px'}}>
-            <p>{item.label}</p>
+    return (<li > 
+        <div className="menu-item">
+            <p style={{color:"#fff"}}>{item.label}</p>
             {
                 item &&  item.children?.length > 0  ? <p onClick={()=>handleToggleChildren(item.label)}>{
-                    displayCurrentChildren[item.label] ? <FaMinus color="#000" size={25}/> : <FaPlus  color="#000" size={25}/>
+                    displayCurrentChildren[item.label] ? <FaMinus color="#fff" size={15}/> : <FaPlus  color="#fff" size={15}/>
                 }</p> : null
             }
         </div>

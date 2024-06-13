@@ -8,6 +8,8 @@ import LoadMoreButton from "./components/load-more-button/Index";
 import TreeView from './components/Tree-view';
 import menus from './components/Tree-view/data';
 
+import QRcodeGenerator from "./components/qr-code-generator/Index"
+
 function App() {
 
   return (
@@ -30,7 +32,10 @@ function App() {
         {/* <LoadMoreButton/> */}
 
         {/* Tree View / Menu UI component */}
-        <TreeView menus={menus}/>
+        {/* <TreeView menus={menus}/> */}
+
+        {/* QR code Generator */}
+        <QRcodeGenerator/>
       </div>
     </>
   )
