@@ -10,6 +10,8 @@ import menus from './components/Tree-view/data';
 
 import QRcodeGenerator from "./components/qr-code-generator/Index"
 
+import SwitchMode from "./components/switch-mode/Index"
+
 function App() {
 
   return (
@@ -35,7 +37,10 @@ function App() {
         {/* <TreeView menus={menus}/> */}
 
         {/* QR code Generator */}
-        <QRcodeGenerator/>
+        {/* <QRcodeGenerator/> */}
+
+        {/* Switch Mode */}
+        <SwitchMode/>
       </div>
     </>
   )
