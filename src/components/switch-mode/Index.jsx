@@ -1,11 +1,18 @@
-import { useState } from "react";
+import "./styles.css";
+import useLocalStorage from "./useLocalStorage.jsx"
 export default function SwitchMode(){
   
+    const [theme,setTheme] = useLocalStorage("theme","dark"); 
 
-    return <div className="light-dark-mode">
+    function handleToggleTheme(){
+        setTheme(theme==="dark" ? "light" : "dark");
+    }
+   
+
+    return <div className="light-dark-mode" data-theme={theme}>
         <div className="container">
             <p>Hello world!</p>
-            <button >Change Them</button>
+            <button onClick={handleToggleTheme}>Change Theme</button>
         </div>
     </div>
 
