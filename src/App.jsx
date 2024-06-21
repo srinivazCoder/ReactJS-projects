@@ -11,6 +11,7 @@ import menus from './components/Tree-view/data';
 import QRcodeGenerator from "./components/qr-code-generator/Index"
 
 import SwitchMode from "./components/switch-mode/Index"
+import ScrollIndicator from "./components/scroll-indicator/Index"
 
 function App() {
 
@@ -40,7 +41,10 @@ function App() {
         {/* <QRcodeGenerator/> */}
 
         {/* Switch Mode */}
-        <SwitchMode/>
+        {/* <SwitchMode/> */}
+
+        {/* scroll-indicator */}
+        <ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/>
       </div>
     </>
   )
