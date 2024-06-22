@@ -31,13 +31,6 @@ export default function ScrollIndicator({ url }) {
     }, [url]);
 
     function handleScrollPercentage() {
-        // console.log(
-        //     document.body.scrollTop,
-        //     document.documentElement.scrollTop,
-        //     document.documentElement.scrollHeight,
-        //     document.documentElement.clientHeight
-
-        // );
 
         const howMuchScrolled = document.body.scrollTop || document.documentElement.scrollTop;
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -50,9 +43,8 @@ export default function ScrollIndicator({ url }) {
         return (() => {
             window.removeEventListener('scroll', () => { })
         })
-    })
-
-    console.log("OKAY", scrollPercentage)
+    });
+    
 
     if(loading){
         return <div>Loading... Please wait...</div>

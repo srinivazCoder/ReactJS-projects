@@ -13,6 +13,8 @@ import QRcodeGenerator from "./components/qr-code-generator/Index"
 import SwitchMode from "./components/switch-mode/Index"
 import ScrollIndicator from "./components/scroll-indicator/Index"
 
+import TabTest from "./components/custom-tabs/tab-test";
+
 function App() {
 
   return (
@@ -44,7 +46,10 @@ function App() {
         {/* <SwitchMode/> */}
 
         {/* scroll-indicator */}
-        <ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/>
+        {/* <ScrollIndicator url={"https://dummyjson.com/products?limit=100"}/> */}
+
+        {/* Custom Tabs */}
+        {/* <TabTest/> */}
       </div>
     </>
   )
