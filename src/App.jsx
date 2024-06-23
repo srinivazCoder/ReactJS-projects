@@ -14,6 +14,7 @@ import SwitchMode from "./components/switch-mode/Index"
 import ScrollIndicator from "./components/scroll-indicator/Index"
 
 import TabTest from "./components/custom-tabs/tab-test";
+import ModalTest from './components/custom-modal-popup/modal-test';
 
 function App() {
 
@@ -50,6 +51,9 @@ function App() {
 
         {/* Custom Tabs */}
         {/* <TabTest/> */}
+
+        {/* Custom Model Popup} */}
+        <ModalTest/>
       </div>
     </>
   )
