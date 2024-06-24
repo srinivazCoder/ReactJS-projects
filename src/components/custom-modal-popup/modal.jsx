@@ -17,7 +17,7 @@ export default function Modal({ colsed, id, header, body, footer }) {
          </div>
          <div className="footer">
             {
-               footer ? footer : <div>This is our Modal Footer</div>
+               footer ? footer : <h2>This is our Modal Footer</h2>
             }
          </div>
       </div>

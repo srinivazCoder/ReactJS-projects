@@ -15,7 +15,7 @@ import Modal from "./modal";
     return <div>
       <button onClick={handleModalPopup}>Open Model Popup</button>
       {
-         isOpen && <Modal colsed={handleModelClosed} body={<div>Costomized Body</div>}/>
+         isOpen && <Modal colsed={handleModelClosed} header={<div>Costomized Header</div>} body={<div>Costomized Body</div>} footer={<h2>Costomized footer</h2>}/>
       }
     </div>
  }

@@ -16,6 +16,8 @@ import ScrollIndicator from "./components/scroll-indicator/Index"
 import TabTest from "./components/custom-tabs/tab-test";
 import ModalTest from './components/custom-modal-popup/modal-test';
 
+import GitHubProfileFinder from './components/gitHubProfileFinder/Index';
+
 function App() {
 
   return (
@@ -53,7 +55,10 @@ function App() {
         {/* <TabTest/> */}
 
         {/* Custom Model Popup} */}
-        <ModalTest/>
+        {/* <ModalTest/> */}
+
+        {/* Git profile finder */}
+        <GitHubProfileFinder/>
       </div>
     </>
   )
