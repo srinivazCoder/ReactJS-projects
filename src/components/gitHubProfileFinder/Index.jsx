@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react"
 import User from "./user";
+import "./gitHubProfile.css";
 export default function GitHubProfileFinder() {
 
     const [userName, setUserName] = useState("srinivazCoder");
     const [userData, setUserData] = useState(null);
     const [loading, setLoading] = useState(false);
+    const [isError,setIsError] = useState(false);
 
 
 
@@ -12,6 +14,7 @@ export default function GitHubProfileFinder() {
     function handleSubmit() {
         console.log(userName)
         fetchGitHubUserData();
+        setUserName("");
     }
 
     async function fetchGitHubUserData() {
@@ -20,13 +23,19 @@ export default function GitHubProfileFinder() {
             const res = await fetch(`https://api.github.com/users/${userName}`)
             const data = await res.json();
             console.log(data)
-            if (data) {
+            if (!data.message) {
                 setUserData(data);
                 setLoading(false);
+                setIsError(false);
+            }else{
+                setUserData(null);
+                setLoading(false);
+                setIsError(true);
             }
 
         } catch (e) {
             console.log(e)
+            setIsError(true);
         }
     }
 
@@ -51,10 +60,13 @@ export default function GitHubProfileFinder() {
                 <button onClick={handleSubmit}>Search</button>
             </div>
 
+            { isError ? <h1>Error / Not found...</h1> : null}
+        
+
            { loading ? <h1>Loading...</h1> : null}
         
             {
-                userData && <User user={userData}/>
+                userData!==null ? <User user={userData}/> : null
             }
 
         </div>
