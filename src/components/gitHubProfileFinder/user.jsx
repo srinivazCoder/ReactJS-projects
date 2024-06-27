@@ -7,11 +7,11 @@ export default function User({ user }) {
             <div>
                 <img src={avatar_url} className="avatar" alt="User" />
             </div>
-            <div>
+            <div className="name-container">
                 <a href={`https://github.com/${login}`} target="_blank" rel="noopener noreferrer">{name || login}</a>
                 <p>User joined on {` ${userJoined.toDateString()}`}</p>
             </div>
-            <div className="name-container">
+            <div className="profile-info">
                 <div>
                     <p>Public Repos</p>
                     <p>{public_repos}</p>
