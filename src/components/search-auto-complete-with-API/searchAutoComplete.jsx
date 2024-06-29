@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import Suggestions from "./suggestions"
 
 export default function SearchAutoCompleteAPI() {
 
@@ -19,15 +20,18 @@ export default function SearchAutoCompleteAPI() {
 
                 : [];
 
-            setFilteredUsers(filterData)
-            setShowDropdown(true)
-
-
+            setFilteredUsers(filterData);
+            setShowDropdown(true);
         }else{
-             setFilteredUsers([])
-            setShowDropdown(false)
+             setFilteredUsers([]);
+            setShowDropdown(false);
         }
 
+    }
+
+    function handleClick(data){
+        setSearchParam(data);
+        setShowDropdown(false);
     }
 
     async function fetchListOfUsers() {
@@ -63,9 +67,7 @@ export default function SearchAutoCompleteAPI() {
             {loading && <h6>Loading...</h6>}
             {error && <h6>Error-{error}</h6>}
 
-            {showDropdown && filteredUsers.length>0 && <ul>
-                {filteredUsers.map((e,i)=><li key={i}>{e}</li>)}
-                </ul>}
+            {showDropdown && filteredUsers.length>0 && <Suggestions handleClickList={handleClick} suggestionUsers={filteredUsers} /> }
         </div>
     )
 }
