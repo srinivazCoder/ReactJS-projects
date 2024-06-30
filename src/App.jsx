@@ -18,6 +18,7 @@ import ModalTest from './components/custom-modal-popup/modal-test';
 
 import GitHubProfileFinder from './components/gitHubProfileFinder/Index';
 import SearchAutoCompleteAPI from './components/search-auto-complete-with-API/searchAutoComplete';
+import TicTactToe from './components/tic-tact-toe/tic-tact-toe';
 
 function App() {
 
@@ -62,7 +63,10 @@ function App() {
         {/* <GitHubProfileFinder/> */}
 
         {/* Search Auto complete with API */}
-        <SearchAutoCompleteAPI/>
+        {/* <SearchAutoCompleteAPI/> */}
+
+        {/* Tic Tac Toe */}
+        <TicTactToe/>
       </div>
     </>
   )

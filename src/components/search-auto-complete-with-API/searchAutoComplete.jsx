@@ -14,7 +14,7 @@ export default function SearchAutoCompleteAPI() {
         let query = event.target.value.toLowerCase();
         setSearchParam(query);
 
-        if (query.length > 0) {
+        if (query.length > 1) {
             const filterData = users && users.length ?
                 users.filter((u) => u.toLowerCase().includes(query))
 
