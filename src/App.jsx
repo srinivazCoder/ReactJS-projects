@@ -21,6 +21,10 @@ import SearchAutoCompleteAPI from './components/search-auto-complete-with-API/se
 import TicTactToe from './components/tic-tact-toe/tic-tact-toe';
 import FeatureFlags from "./components/feature-flag/Feature-flag";
 import FeatureFlagGlobalState from './components/feature-flag/context/Context';
+import UseFetchHookTest from "./components/use-fetch/test";
+import UseOnClickOutsideTest from "./components/use-outside-click/useOutSideClickTest";
+
+
 
 function App() {
 
@@ -71,9 +75,15 @@ function App() {
         {/* <TicTactToe/> */}
 
         {/* Feature Flage Component */}
-        <FeatureFlagGlobalState>
+        {/* <FeatureFlagGlobalState>
           <FeatureFlags />
-        </FeatureFlagGlobalState>
+        </FeatureFlagGlobalState> */}
+
+        {/* Usefeth Custom hook */}
+        <UseFetchHookTest/>
+
+        {/* out side click component */}
+        <UseOnClickOutsideTest/>
 
       </div>
     </>
