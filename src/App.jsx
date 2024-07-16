@@ -25,6 +25,7 @@ import UseFetchHookTest from "./components/use-fetch/test";
 import UseOnClickOutsideTest from "./components/use-outside-click/useOutSideClickTest";
 import WindowResizer from "./components/use-window-resize/WindowResize";
 import ScrollToTopAndBottom from "./components/scroll-to-top-and-bottom/ScrollToTopAndBottom";
+import ScrollToSection from "./components/scroll-to-top-and-bottom/scrollToSection";
 
 
 
@@ -91,7 +92,10 @@ function App() {
        {/* <WindowResizer/> */}
 
        {/* Scroll Top to Bottom */}
-        <ScrollToTopAndBottom/>
+        {/* <ScrollToTopAndBottom/> */}
+
+        {/* Scroll to a perticular section */}
+        <ScrollToSection/>
       </div>
     </>
   )
