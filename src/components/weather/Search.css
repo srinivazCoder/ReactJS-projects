@@ -29,3 +29,35 @@
     cursor: pointer;
     padding: 13px 15px;
 }
+.weather-container{
+    text-align: center;
+    margin:25px auto 0px;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 20px;
+    height: 470px auto;
+    padding:20px 15px;
+    background-color: aqua;
+}
+
+.city-name{
+    margin-bottom: 10px;
+}
+
+.date{
+    font-size: 18px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.temp{
+    font-size: 64px;
+    color:#000;
+    text-align: center;
+    font-weight: bold;
+}
+
+.description{
+    color:#000;
+    font-size : 22px;
+}
